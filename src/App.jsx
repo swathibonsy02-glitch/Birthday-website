@@ -16,6 +16,9 @@ import {
 } from "lucide-react";
 import { birthdayContent } from "./data/birthdayContent";
 
+const storyAssetPath = (fileName) =>
+  encodeURI(`/story/story images/${fileName}`);
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -960,6 +963,25 @@ function HugAnimation() {
                 className="hug-photo"
                 src={storyAssetPath("kissing scene in my house corridor.jpeg")}
                 alt="A romantic moment between us"
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src =
+                    "data:image/svg+xml;charset=UTF-8," +
+                    encodeURIComponent(`
+                      <svg xmlns='http://www.w3.org/2000/svg' width='900' height='1100' viewBox='0 0 900 1100'>
+                        <defs>
+                          <linearGradient id='bg' x1='0' x2='1' y1='0' y2='1'>
+                            <stop offset='0%' stop-color='#f8d9df'/>
+                            <stop offset='100%' stop-color='#d7dff8'/>
+                          </linearGradient>
+                        </defs>
+                        <rect width='900' height='1100' fill='url(#bg)'/>
+                        <circle cx='450' cy='350' r='150' fill='rgba(255,255,255,0.35)'/>
+                        <text x='450' y='620' text-anchor='middle' fill='#3d2b32' font-size='42' font-family='Georgia, serif'>Our little hug</text>
+                        <text x='450' y='690' text-anchor='middle' fill='#3d2b32' font-size='30' font-family='Georgia, serif'>forever</text>
+                      </svg>
+                    `);
+                }}
               />
             </motion.div>
             <span className="hug-message">
@@ -1047,6 +1069,23 @@ function StoryVideoSection() {
                 playsInline
                 preload="metadata"
                 aria-label="Our story video"
+                onError={(event) => {
+                  event.currentTarget.src =
+                    "data:image/svg+xml;charset=UTF-8," +
+                    encodeURIComponent(`
+                      <svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'>
+                        <defs>
+                          <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>
+                            <stop offset='0%' stop-color='#1d1017'/>
+                            <stop offset='100%' stop-color='#4a101d'/>
+                          </linearGradient>
+                        </defs>
+                        <rect width='900' height='900' fill='url(#g)'/>
+                        <circle cx='450' cy='330' r='120' fill='rgba(245,233,223,0.18)'/>
+                        <text x='450' y='520' text-anchor='middle' fill='#F5E9DF' font-size='42' font-family='Georgia, serif'>Our memory</text>
+                      </svg>
+                    `);
+                }}
               />
 
               {!hasStarted && (
