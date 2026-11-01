@@ -958,7 +958,7 @@ function HugAnimation() {
             >
               <img
                 className="hug-photo"
-                src="/story/story images/kissing scene in my house corridor.jpeg"
+                src={storyAssetPath("kissing scene in my house corridor.jpeg")}
                 alt="A romantic moment between us"
               />
             </motion.div>
@@ -1039,7 +1039,9 @@ function StoryVideoSection() {
               <video
                 ref={videoRef}
                 className="video-player"
-                src="/story/story images/WhatsApp Video 2026-11-01 at 4.05.05 PM.mp4"
+                src={storyAssetPath(
+                  "WhatsApp Video 2026-11-01 at 4.05.05 PM.mp4"
+                )}
                 controls
                 controlsList="nodownload"
                 playsInline
@@ -1138,87 +1140,87 @@ function GhibliAlbumSection() {
   const albumPhotos = useMemo(
     () => [
       {
-        src: "/story/story images/bday treat on nov 2024.jpeg",
+        src: "/story/story%20images/bday%20treat%20on%20nov%202024.jpeg",
         caption: "Birthday treat in November 2024",
         date: "Memory 01",
       },
       {
-        src: "/story/story images/bike ride in eccr road.jpeg",
+        src: "/story/story%20images/bike%20ride%20in%20eccr%20road.jpeg",
         caption: "Bike ride on the ECR road",
         date: "Memory 02",
       },
       {
-        src: "/story/story images/bike ride in ecr road during my ramapuram institute time'.jpeg",
+        src: "/story/story%20images/bike%20ride%20in%20ecr%20road%20during%20my%20ramapuram%20institute%20time'.jpeg",
         caption: "Ride days during my college time",
         date: "Memory 03",
       },
       {
-        src: "/story/story images/chennai metro first meet scene.png",
+        src: "/story/story%20images/chennai%20metro%20first%20meet%20scene.png",
         caption: "Our first metro meeting",
         date: "Memory 04",
       },
       {
-        src: "/story/story images/coconut drink when i come back from mysore everytime.png",
+        src: "/story/story%20images/coconut%20drink%20when%20i%20come%20back%20from%20mysore%20everytime.png",
         caption: "Coconut drink after Mysore days",
         date: "Memory 05",
       },
       {
-        src: "/story/story images/eating time.jpeg",
+        src: "/story/story%20images/eating%20time.jpeg",
         caption: "Eating time with you",
         date: "Memory 06",
       },
       {
-        src: "/story/story images/first meet movie time.jpeg",
+        src: "/story/story%20images/first%20meet%20movie%20time.jpeg",
         caption: "Our first movie time",
         date: "Memory 07",
       },
       {
-        src: "/story/story images/future.png",
+        src: "/story/story%20images/future.png",
         caption: "Our future",
         date: "Memory 08",
       },
       {
-        src: "/story/story images/hands together.png",
+        src: "/story/story%20images/hands%20together.png",
         caption: "Hands together",
         date: "Memory 09",
       },
       {
-        src: "/story/story images/he pranked i cried so he gave chocolate and consoled me.jpeg",
+        src: "/story/story%20images/he%20pranked%20i%20cried%20so%20he%20gave%20chocolate%20and%20consoled%20me.jpeg",
         caption: "You made me smile even when I cried",
         date: "Memory 10",
       },
       {
-        src: "/story/story images/i gave him headphone near by my house'.jpeg",
+        src: "/story/story%20images/i%20gave%20him%20headphone%20near%20by%20my%20house'.jpeg",
         caption: "Small gestures, big love",
         date: "Memory 11",
       },
       {
-        src: "/story/story images/kissing scene in my house corridor.jpeg",
+        src: "/story/story%20images/kissing%20scene%20in%20my%20house%20corridor.jpeg",
         caption: "Our little home memories",
         date: "Memory 12",
       },
       {
-        src: "/story/story images/late night talk first time.png",
+        src: "/story/story%20images/late%20night%20talk%20first%20time.png",
         caption: "Late-night talks",
         date: "Memory 13",
       },
       {
-        src: "/story/story images/metro scene on his bday nov 2024.jpeg",
+        src: "/story/story%20images/metro%20scene%20on%20his%20bday%20nov%202024.jpeg",
         caption: "Birthday metro moments",
         date: "Memory 14",
       },
       {
-        src: "/story/story images/once i said i am hungry so he bought cookies on night.jpeg",
+        src: "/story/story%20images/once%20i%20said%20i%20am%20hungry%20so%20he%20bought%20cookies%20on%20night.jpeg",
         caption: "Cookies for me when I was hungry",
         date: "Memory 15",
       },
       {
-        src: "/story/story images/waited in ecr road foof court as it rains.jpeg",
+        src: "/story/story%20images/waited%20in%20ecr%20road%20foof%20court%20as%20it%20rains.jpeg",
         caption: "Waiting together in the rain",
         date: "Memory 16",
       },
       {
-        src: "/story/story images/we eat fried rice together in my room at night.jpeg",
+        src: "/story/story%20images/we%20eat%20fried%20rice%20together%20in%20my%20room%20at%20night.jpeg",
         caption: "Late-night fried rice dates",
         date: "Memory 17",
       },
