@@ -91,7 +91,7 @@ button {
   border-radius: 999px;
   background: rgba(17, 17, 17, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  backdrop-filter: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
@@ -538,7 +538,7 @@ button {
   display: grid;
   place-items: center;
   background: rgba(8, 8, 8, 0.82);
-  backdrop-filter: blur(10px);
+  backdrop-filter: none;
   padding: 18px;
 }
 
@@ -1065,7 +1065,7 @@ button {
   display: grid;
   place-items: center;
   cursor: pointer;
-  backdrop-filter: blur(8px);
+  backdrop-filter: none;
 }
 
 .video-placeholder-wrap {
@@ -1249,18 +1249,8 @@ button {
   height: 420px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
-  filter: blur(14px);
+  filter: none;
   z-index: 0;
-}
-
-.birthday-stage::before {
-  top: -120px;
-  left: -110px;
-}
-
-.birthday-stage::after {
-  right: -110px;
-  bottom: -100px;
 }
 
 .birthday-stage-inner {
