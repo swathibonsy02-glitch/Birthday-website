@@ -1057,7 +1057,25 @@ function StoryVideoSection() {
 
         {showVideo && (
           <div className="video-placeholder-wrap">
-            <div className="video-player-shell" onClick={handleToggle}>
+            <div
+              className="video-player-shell"
+              onClick={(event) => event.stopPropagation()}
+              onPointerDown={(event) => event.stopPropagation()}
+              onTouchStart={(event) => event.stopPropagation()}
+              onMouseDown={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="video-close-button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleToggle();
+                }}
+                aria-label="Close story video"
+              >
+                <X size={18} />
+              </button>
+
               <video
                 ref={videoRef}
                 className="video-player"
@@ -1069,6 +1087,10 @@ function StoryVideoSection() {
                 playsInline
                 preload="metadata"
                 aria-label="Our story video"
+                onClick={(event) => event.stopPropagation()}
+                onPointerDown={(event) => event.stopPropagation()}
+                onMouseDown={(event) => event.stopPropagation()}
+                onTouchStart={(event) => event.stopPropagation()}
                 onError={(event) => {
                   event.currentTarget.src =
                     "data:image/svg+xml;charset=UTF-8," +
